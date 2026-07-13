@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>huw3s inc | ©2026</title>
 
-  <!-- Fonts (exact same as oksi.dev) -->
+  <!-- Fonts (exact same as huw3s.dev) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@100;200;300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
 
   <style>
-    /* ── EXACT CSS VARIABLES from oksi.dev ── */
+    /* ── EXACT CSS VARIABLES from  huw3s.dev ── */
     :root {
       --background: #0a0a0b;
       --foreground: #f4f1ea;
@@ -2157,7 +2157,7 @@
   }, 60);
 })();
 
-// ── WEBGL ANIMATED BACKGROUND (exact shader from oksi.dev) ──
+// ── WEBGL ANIMATED BACKGROUND (exact shader from huw3s.dev) ──
 (function() {
   const canvas = document.getElementById('webgl-canvas');
   const gl = canvas.getContext('webgl', { antialias: false, depth: false, stencil: false, powerPreference: 'low-power' });
@@ -2269,9 +2269,9 @@
   frame();
 })();
 
-// ── LENIS SMOOTH SCROLL (exact lerp algorithm from oksi.dev source) ──
+// ── LENIS SMOOTH SCROLL (exact lerp algorithm from huw3s.dev source) ──
 const Lenis = (function() {
-  // Easing: expo out — same as oksi.dev
+  // Easing: expo out — same as huw3s.dev
   function easeExpoOut(t) { return t === 1 ? 1 : 1 - Math.pow(2, -10 * t); }
   function clamp(min, val, max) { return Math.max(min, Math.min(val, max)); }
 
@@ -2282,7 +2282,7 @@ const Lenis = (function() {
   let lastTime  = performance.now();
   let isAnimating = false;
   let animStart = 0, animFrom = 0, animTo = 0;
-  const LERP    = 0.1;          // same lerp as oksi.dev source
+  const LERP    = 0.1;          // same lerp as huw3s.dev source
   const DURATION = 0;           // 0 = lerp mode (not duration mode)
   const WHEEL_MULT = 1.0;
   const limit = () => document.body.scrollHeight - window.innerHeight;
@@ -2315,7 +2315,7 @@ const Lenis = (function() {
     const dt = Math.min((time - lastTime) / 1000, 0.1); // cap at 100ms
     lastTime = time;
 
-    // lerp toward target  (exact formula from oksi.dev AnimatedValue)
+    // lerp toward target  (exact formula from huw3s.dev AnimatedValue)
     // value = (1 - exp(-lerp * 60 * dt)) * (target - value) + value
     const lerpFactor = 1 - Math.exp(-60 * LERP * dt);
     scrollY += (targetY - scrollY) * lerpFactor;
@@ -2475,7 +2475,7 @@ document.querySelectorAll('.service-row, .project-row').forEach(row => {
 
 // ── SCROLL-DRIVEN PARALLAX ──
 (function() {
-  // Hero content slight parallax (like oksi.dev hero moves on scroll)
+  // Hero content slight parallax (like huw3s.dev hero moves on scroll)
   const heroContent = document.querySelector('.hero-content');
   const heroCanvas  = document.getElementById('webgl-canvas');
   const heroOrb1    = document.querySelector('.hero-orb-1');
@@ -2486,7 +2486,7 @@ document.querySelectorAll('.service-row, .project-row').forEach(row => {
     const heroH = document.getElementById('hero').offsetHeight;
     const prog  = Math.min(y / heroH, 1);
 
-    // content slides up & fades — same as oksi.dev hero
+    // content slides up & fades — same as huw3s.dev hero
     heroContent.style.transform  = `translateY(${prog * 60}px)`;
     heroContent.style.opacity    = 1 - prog * 1.4;
 
